@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.liquidcourage.ui.main;
+package edu.cnm.deepdive.liquidcourage.model.controller;
 
 import androidx.lifecycle.ViewModel;
 
