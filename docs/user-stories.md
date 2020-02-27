@@ -1,0 +1,6 @@
+# User Stories
+
+* Employers/Employees: Mike owns a diesel parts warehouse and Matt is an employee. There are days that they are both easily agitated and get frustrated at one another for reasons they have built up in their heads. After a long, hard, hot day of work they both go their seperate ways but consume beverages containg alcohol. As the evening and drinking progresses on, Mike sends a funny text message to Matt. Matt befcomes offended and defensive. The two exchange hateful text messages. If they had used the "drunk" app., Matt & Mike would have protected themselves from an embarrassing night of angry, belittling, and regretful text messages.
+
+* Musicians: Mark, Lance, & Gary are in a band called "Booze, Women, Rock, & Selfies". They would perform in local bars 3-4 times per week & would visit local bars the nights they were not performing. After consuming a substantial amount of alcohol, they would take pictures of themselves, with attractive women, the other band members, etc... & post the pictures on every social media account they were a part of. Mark, Lance, & Gary had family members, co-workers, childhood friends, & bar owners as friends on these social media sites. Using the Liquid Courage Eliminator would prevent such photos from being uploaded for everyone to see.
+
