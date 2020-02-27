@@ -11,11 +11,10 @@ import java.util.Date;
     foreignKeys = @ForeignKey(
         entity = App.class,
         parentColumns = "app_id",
-        childColumns = "app_id",
+        childColumns = "blockApp_id",
         onDelete = ForeignKey.CASCADE
     )
 )
-
 public class BlockApp {
 
   @NonNull
@@ -33,10 +32,6 @@ public class BlockApp {
 
   @ColumnInfo
   private Date end = new Date();
-
-  @NonNull
-  @ColumnInfo(name = "block_app")
-  private boolean blockApp;
 
 
   // @ColumnInfo(index = true)
@@ -74,14 +69,6 @@ public class BlockApp {
 
   public void setEnd(Date end) {
     this.end = end;
-  }
-
-  public boolean isBlockApp() {
-    return blockApp;
-  }
-
-  public void setBlockApp(boolean blockApp) {
-    this.blockApp = blockApp;
   }
 
 //  public Enum getMethod() {

@@ -16,16 +16,13 @@ import java.util.List;
 public interface BlockAppDao {
 
   @Insert
-  Single<Long> insert(BlockApp blockApp);
+  Long insert(BlockApp blockApp);
 
   @Update
   int update(BlockApp blockApps);
 
   @Delete
   int delete(BlockApp... blockApps);
-
-  @Query("SELECT * FROM BlockApp WHERE block_app = :id")
-  Single<BlockApp> select(long id);
 
 }
 
