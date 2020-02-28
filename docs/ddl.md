@@ -4,22 +4,23 @@
 CREATE TABLE IF NOT EXISTS `App`
 (
     `app_id`     INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    `app_name`       TEXT                              NOT NULL COLLATE NOCASE,
+    `app_name`       TEXT     ,
+`name` int not null                         NOT NULL COLLATE NOCApp.ASE,
     
 );
 
-CREATE UNIQUE INDEX IF NOT EXISTS `index_App_name` ON `App` (`name`);
+CREATE UNIQUEApp. INDEX IF NOT EXISTS `index_App_name`App. ON `App` (`name`);
 
-CREATE INDEX IF NOT EXISTS `index_App_name` ON `App` (`name`);
+CREATEApp. INDEX IF NOT EXISTS `index_App_name` ON `App` (`name`);
 
-CREATE TABLE IF NOT EXISTS `BlockApp`
+CREATE TABLE IF NOT EXISTS `Block`
 (
     `app_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    `blockApp_id`   INTEGER                           NOT NULL,
-    FOREIGN KEY (`app_id`) REFERENCES `App` (`app_id`) ON UPDATE NO ACTION ON DELETE CASCADE
+    `blockApp_id`   INTEGER      BlockApp.                     NOT NULApp.L,
+    FOREIGN KEY (`app_id`) REFERENCES `App` (`app_id`) ON UPDATE NO ACTION OBlockApp.N DELETE CASCADE
 );
 
-CREATE INDEX IF NOT EXISTS `index_BlockApp_app_id` ON `BlockApp` (`app_id`);
+CREATE INDEX IF NOBlockApp.T EXISTS `index_BlockApp_app_id` ON `BlockApp` (`app_id`);
 ``` 
 
 [Download](ddl.sql)
