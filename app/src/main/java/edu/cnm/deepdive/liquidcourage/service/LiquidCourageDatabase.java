@@ -7,19 +7,18 @@ import androidx.room.RoomDatabase;
 import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
 import edu.cnm.deepdive.liquidcourage.model.dao.AppDao;
-import edu.cnm.deepdive.liquidcourage.model.dao.AppDao;
-import edu.cnm.deepdive.liquidcourage.model.dao.BlockAppDao;
+import edu.cnm.deepdive.liquidcourage.model.dao.BlockDao;
 import edu.cnm.deepdive.liquidcourage.model.entity.App;
-import edu.cnm.deepdive.liquidcourage.model.entity.BlockApp;
+import edu.cnm.deepdive.liquidcourage.model.entity.Block;
+import edu.cnm.deepdive.liquidcourage.service.LiquidCourageDatabase.Converters;
 import java.util.Date;
 
 @Database(
-    entities = {App.class, BlockApp.class},
+    entities = {App.class, Block.class},
     version = 1,
     exportSchema = true
 )
-
-@TypeConverters(LiquidCourageDatabase.Converters.class)
+@TypeConverters(Converters.class)
 public abstract class LiquidCourageDatabase extends RoomDatabase {
 
   private static final String DB_NAME = "LiquidCourageDatabase";
@@ -36,7 +35,7 @@ public abstract class LiquidCourageDatabase extends RoomDatabase {
 
   public abstract AppDao getAppDao();
 
-  public abstract BlockAppDao getBlockAppDao();
+  public abstract BlockDao getBlockDao();
 
   private static class InstanceHolder {
 

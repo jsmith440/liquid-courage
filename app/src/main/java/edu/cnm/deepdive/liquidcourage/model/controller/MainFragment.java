@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import edu.cnm.deepdive.liquidcourage.R;
+import edu.cnm.deepdive.liquidcourage.viewmodel.MainViewModel;
 
 public class MainFragment extends Fragment {
 

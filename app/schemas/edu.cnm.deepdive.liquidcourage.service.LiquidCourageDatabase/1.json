@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "64132d31b21a0cc9f7bc44569aefb8a7",
+    "identityHash": "042de93cc039cb017a7ef908fc853b72",
     "entities": [
       {
         "tableName": "App",
@@ -34,25 +34,25 @@
             "columnNames": [
               "app_name"
             ],
-            "createSql": "CREATE UNIQUE INDEX `index_App_app_name` ON `${TABLE_NAME}` (`app_name`)"
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_App_app_name` ON `${TABLE_NAME}` (`app_name`)"
           }
         ],
         "foreignKeys": []
       },
       {
-        "tableName": "BlockApp",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`blockApp_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `app_name` TEXT NOT NULL, `start` INTEGER NOT NULL, `end` INTEGER, FOREIGN KEY(`blockApp_id`) REFERENCES `App`(`app_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "tableName": "Block",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`block_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `app_id` INTEGER NOT NULL, `start` INTEGER NOT NULL, `end` INTEGER, FOREIGN KEY(`app_id`) REFERENCES `App`(`app_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
-            "columnName": "blockApp_id",
+            "columnName": "block_id",
             "affinity": "INTEGER",
             "notNull": true
           },
           {
-            "fieldPath": "appName",
-            "columnName": "app_name",
-            "affinity": "TEXT",
+            "fieldPath": "appId",
+            "columnName": "app_id",
+            "affinity": "INTEGER",
             "notNull": true
           },
           {
@@ -70,18 +70,27 @@
         ],
         "primaryKey": {
           "columnNames": [
-            "blockApp_id"
+            "block_id"
           ],
           "autoGenerate": true
         },
-        "indices": [],
+        "indices": [
+          {
+            "name": "index_Block_app_id",
+            "unique": false,
+            "columnNames": [
+              "app_id"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_Block_app_id` ON `${TABLE_NAME}` (`app_id`)"
+          }
+        ],
         "foreignKeys": [
           {
             "table": "App",
             "onDelete": "CASCADE",
             "onUpdate": "NO ACTION",
             "columns": [
-              "blockApp_id"
+              "app_id"
             ],
             "referencedColumns": [
               "app_id"
@@ -90,9 +99,10 @@
         ]
       }
     ],
+    "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"64132d31b21a0cc9f7bc44569aefb8a7\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '042de93cc039cb017a7ef908fc853b72')"
     ]
   }
 }

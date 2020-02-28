@@ -11,20 +11,18 @@ import java.util.Date;
     foreignKeys = @ForeignKey(
         entity = App.class,
         parentColumns = "app_id",
-        childColumns = "blockApp_id",
+        childColumns = "app_id",
         onDelete = ForeignKey.CASCADE
     )
 )
-public class BlockApp {
+public class Block {
 
-  @NonNull
-  @ColumnInfo(name = "blockApp_id")
+  @ColumnInfo(name = "block_id")
   @PrimaryKey(autoGenerate = true)
   private long id;
 
-  @NonNull
-  @ColumnInfo(name = "app_name")
-  private String appName;
+  @ColumnInfo(name = "app_id", index = true)
+  private long appId;
 
   @NonNull
   @ColumnInfo
@@ -46,13 +44,12 @@ public class BlockApp {
     this.id = id;
   }
 
-  @NonNull
-  public String getAppName() {
-    return appName;
+  public long getAppId() {
+    return appId;
   }
 
-  public void setAppName(@NonNull String appName) {
-    this.appName = appName;
+  public void setAppId(long appId) {
+    this.appId = appId;
   }
 
   public Date getStart() {
