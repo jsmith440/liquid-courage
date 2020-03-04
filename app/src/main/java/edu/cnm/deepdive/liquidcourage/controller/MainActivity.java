@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.liquidcourage.model.controller;
+package edu.cnm.deepdive.liquidcourage.controller;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
