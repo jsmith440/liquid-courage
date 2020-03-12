@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">Liquid Courage Eliminator</string>
+  <string name="content_description_placeholder">Placeholder</string>
 </resources>
