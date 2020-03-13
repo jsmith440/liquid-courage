@@ -42,7 +42,14 @@ public class MainActivity extends AppCompatActivity {
   private void checkForPreferences() {
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
     if (!preferences.contains("audio")
-    && !preferences.contains()) {
+    && !preferences.contains("images")
+    && !preferences.contains("maps")
+    && !preferences.contains("games")
+    && !preferences.contains("news")
+    && !preferences.contains("video")
+    && !preferences.contains("other")
+    && !preferences.contains("productivity")
+    && !preferences.contains("social")) {
       // TODO jump to settings activity
     }
   }
