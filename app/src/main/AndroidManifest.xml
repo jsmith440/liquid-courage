@@ -4,30 +4,29 @@
   package="edu.cnm.deepdive.liquidcourage">
 
   <uses-permission
-    android:name="android.permission.INTERNET"/>
-  <uses-permission
-    android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-    android:maxSdkVersion="28"/>
+    android:maxSdkVersion="28"
+    android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+  <uses-permission android:name="android.permission.INTERNET"/>
 
   <application
-    android:name=".LiquidCourageApplication"
     android:allowBackup="false"
     android:icon="@mipmap/ic_liquid_courage_launcher"
     android:label="@string/app_name"
+    android:name=".LiquidCourageApplication"
     android:roundIcon="@mipmap/ic_liquid_courage_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme"
     tools:ignore="GoogleAppIndexingWarning">
-
+    <activity android:name=".controller.SettingsActivity">
+     </activity>
     <activity android:name=".controller.MainActivity">
-
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
+
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
-
     </activity>
-
   </application>
 
 </manifest>

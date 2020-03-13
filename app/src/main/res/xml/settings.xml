@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <SwitchPreference
+    android:key="audio"
+    android:title="Audio Applications"
+   />
+
+  <SwitchPreference
+    android:key="images"
+    android:title="Images Applications"
+    />
+  <SwitchPreference
+    android:key="games"
+    android:title="Games Applications"
+    />
+  <SwitchPreference
+    android:key="news"
+    android:title="News Applications"
+    />
+  <SwitchPreference
+    android:key="maps"
+    android:title="Maps Applications"
+    />
+  <SwitchPreference
+    android:key="productivity"
+    android:title="Productivity Applications"
+    />
+  <SwitchPreference
+    android:key="social"
+    android:title="Social Applications"
+    />
+  <SwitchPreference
+    android:key="video"
+    android:title="Video Applications"
+    />
+  <SwitchPreference
+    android:key="other"
+    android:title="Other Applications"
+    />
+
+
+</PreferenceScreen>
